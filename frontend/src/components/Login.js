@@ -46,7 +46,7 @@ const Register = () => {
         <label>Password:</label>
         <input
           type="password"
-          value={email}
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         {error.password && <p>{error.password}</p>}
