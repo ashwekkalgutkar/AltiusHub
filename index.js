@@ -20,8 +20,9 @@ console.log("Max subarray sum :",maxSum(arr));// passing array to maxSum fn and 
 //part_2 -> Rotate array by K position
 
 function rotateArray(num,k){
-    k = k%num.length;
+    k = k%num.length;// to check if rotation is in the limit of array length
 
+    //function to reverse only a portion of array
     function rev(nums,start,end){
         while(start<end){
             [nums[start],nums[end]]=[nums[end],nums[start]];
@@ -29,9 +30,9 @@ function rotateArray(num,k){
             end--;
         }
     }
-    rev(num,0,num.length-1);
-    rev(num,0,k-1);
-    rev(num,k,num.length-1);
+    rev(num,0,num.length-1);//reverse entire array
+    rev(num,0,k-1);//to reverse 1st k elements
+    rev(num,k,num.length-1);//reverse remaining elements
 }
 
 let num = [1,2,3,5,6,7,9];
