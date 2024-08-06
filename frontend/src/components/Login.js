@@ -14,7 +14,7 @@ const Login = () => {
       newErrors.email = "Email is required";
     }
     if (password.length < 7) {
-      newErrors.password = "Password must be atleast 7 characters";
+      newErrors.password = "Password is required";
     }
     if (Object.keys(newErrors).length > 0) {
       setError(newErrors);
