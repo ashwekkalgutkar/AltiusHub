@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { loginUser } from "../api";
 import { useNavigate } from "react-router-dom";
 
-const Register = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -52,9 +52,9 @@ const Register = () => {
         {error.password && <p>{error.password}</p>}
       </div>
       {error.submit && <p>{error.submit}</p>}
-      <button type="submit">Register</button>
+      <button type="submit">Login</button>
     </form>
   );
 };
 
-export default Register;
+export default Login;
